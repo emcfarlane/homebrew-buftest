@@ -1,5 +1,6 @@
 name: Buf CI
 on:
+  push:
   pull_request:
     types: [opened, synchronize, reopened, labeled, unlabeled]
   delete:
@@ -25,4 +26,3 @@ jobs:
       - uses: bufbuild/buf-action@main
         with:
           token: ${{ secrets.BUF_TOKEN }}
-          push: ${{ github.event_name == 'pull_request' }}
