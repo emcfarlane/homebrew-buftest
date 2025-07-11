@@ -25,3 +25,4 @@ jobs:
       - uses: bufbuild/buf-action@main
         with:
           token: ${{ secrets.BUF_TOKEN }}
+          push: ${{ github.event_name == 'pull_request' }}
