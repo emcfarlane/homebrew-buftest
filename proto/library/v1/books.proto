@@ -6,7 +6,7 @@ import "google/api/annotations.proto";
 import "google/protobuf/timestamp.proto";
 
 service LibraryService {
-  // Gets a book.
+  // Gets a book. Another check.
   rpc GetBook(GetBookRequest) returns (GetBookResponse) {
     option (google.api.http) = {get: "/v1/books/*"};
     option idempotency_level = NO_SIDE_EFFECTS;
@@ -16,7 +16,7 @@ service LibraryService {
 message Book {
   // Resource name of the book. It must have the format of "shelves/*/books/*".
   // For example: "shelves/shelf1/books/book2".
-  string name = 1;
+string name = 1;
   // The time when the book was created.
   google.protobuf.Timestamp create_time = 2;
   // The time when the book was last updated.
