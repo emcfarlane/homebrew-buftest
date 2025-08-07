@@ -6,7 +6,7 @@ import "google/api/annotations.proto";
 import "google/protobuf/timestamp.proto";
 
 service LibraryService {
-  // Gets a book. A change is made.
+  // Gets a book.
   rpc GetBook(GetBookRequest) returns (GetBookResponse) {
     option (google.api.http) = {get: "/v1/books/*"};
     option idempotency_level = NO_SIDE_EFFECTS;
