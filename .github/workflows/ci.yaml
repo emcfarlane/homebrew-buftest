@@ -29,6 +29,7 @@ jobs:
         #          fetch-depth: 1
       - uses: bufbuild/buf-action@main
         with:
+          version: c6b88ef79fe7fe6a2528b01077022e960c7e1ba9
           token: ${{ secrets.BUF_TOKEN }}
           github_token: ${{ github.token }}
           #push: ${{ github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/staging') }}
