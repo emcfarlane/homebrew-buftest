@@ -31,5 +31,5 @@ jobs:
         with:
           token: ${{ secrets.BUF_TOKEN }}
           github_token: ${{ github.token }}
-          push_create_visibilitiy: public
+          push_create_visibility: public
           #push: ${{ github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/staging') }}
